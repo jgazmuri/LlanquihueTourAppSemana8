@@ -2,8 +2,8 @@ package model;
 
 public class ServicioTuristico {
 
-    private String nombre;
-    private String duracionHoras;
+    protected String nombre;
+    protected String duracionHoras;
 
     public String getNombre() {
         return nombre;
@@ -27,11 +27,9 @@ public class ServicioTuristico {
 
     }
 
-    @Override
-    public String toString() {
-        return "ServicioTuristico{" +
-                "nombre='" + nombre + '\'' +
-                ", duracionHoras='" + duracionHoras + '\'' +
-                '}';
+    public void mostrarInformacion() {
+        System.out.println("Nombre: " + getNombre());
+        System.out.println("DuracionHoras: " + getDuracionHoras());
     }
+
 }

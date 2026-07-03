@@ -1,6 +1,9 @@
 package ui;
 
 import data.GestorServicios;
+import model.ServicioTuristico;
+
+import java.util.List;
 
 public class Main {
 
@@ -8,9 +11,10 @@ public class Main {
 
     GestorServicios gestor = new GestorServicios();
 
-    gestor.crearYMostrarServicios();
-
+    gestor.mostrarTodosLosServicios();
 
     }
 
-}
+    }
+
+

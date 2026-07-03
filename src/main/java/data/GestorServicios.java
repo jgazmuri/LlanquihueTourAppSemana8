@@ -3,28 +3,29 @@ package data;
 import model.ExcursionCultural;
 import model.PaseoLacustre;
 import model.RutaGastronomica;
+import model.ServicioTuristico;
+import java.util.ArrayList;
+import java.util.List;
 
 public class GestorServicios {
 
-    public void crearYMostrarServicios(){
 
-        RutaGastronomica rutaGastronomica = new RutaGastronomica ("Ruta de los Lagos", "4", 2);
-        RutaGastronomica rutaGastronomica1 = new RutaGastronomica("Subida Volcan Villarica", "6", 5);
+    public void mostrarTodosLosServicios(){
 
-        System.out.println("Ruta Gastronomica: " + rutaGastronomica);
-        System.out.println("Ruta Gastronomica: " + rutaGastronomica1);
 
-        PaseoLacustre paseoLacustre = new PaseoLacustre("Trekking Laguna Alta", "2", "Bus");
-        PaseoLacustre paseoLacustre1 = new PaseoLacustre("Laguna Baja", "3", "Bus");
 
-        System.out.println("Paseo Lacustre: " + paseoLacustre);
-        System.out.println("Paseo Lacustre: " + paseoLacustre1);
+        List<ServicioTuristico> servicios = new ArrayList<>();
 
-        ExcursionCultural excursionCultural = new ExcursionCultural("Museo Frutillar", "1", "Central");
-        ExcursionCultural excursionCultural1 = new ExcursionCultural("Museo Puerto Varas", "2", "Central");
+        servicios.add(new ServicioTuristico("Volcan", "4 Horas"));
+        servicios.add(new PaseoLacustre("Paseo Frutillar", "2 Horas", "Bus"));
+        servicios.add(new ExcursionCultural("Museo Villarrica", "3 Horas", "Plaza Principal"));
+        servicios.add(new RutaGastronomica("El Guaton", "1 Hora", 5));
 
-        System.out.println("Excursion Cultural: " + excursionCultural);
-        System.out.println("Excursion Cultural: " + excursionCultural1);
+        for (ServicioTuristico servicio : servicios) {
+
+            servicio.mostrarInformacion();
+
+        }
 
     }
 
