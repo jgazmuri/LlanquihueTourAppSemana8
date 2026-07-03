@@ -1,26 +1,49 @@
-# LlanquihueTourApp - Semana 6: Jerarquía de Servicios Turísticos
+LlanquihueTourApp - Semana 7: Encapsulamiento y Polimorfismo en Servicios Turísticos
 
-## 🎯 Descripción del Objetivo
-El objetivo de esta semana fue implementar una estructura de programación orientada a objetos basada en la herencia. Se diseñó y organizó una jerarquía de clases para representar los diferentes tipos de servicios turísticos que ofrece la aplicación, optimizando el código mediante la reutilización de atributos comunes y la sobreescritura de métodos para mostrar información completa y limpia por consola.
+🎯 Descripción del Objetivo
 
-## 🧱 Clases Creadas y Estructura de Paquetes
-El proyecto se organizó en tres paquetes principales según sus responsabilidades:
+El objetivo de esta semana fue reforzar la jerarquía de clases construida en la semana anterior incorporando dos pilares adicionales de la Programación Orientada a Objetos: encapsulamiento y polimorfismo. Los atributos de cada clase se protegieron mediante modificadores de acceso (private/protected) junto con sus respectivos métodos get y set, y se profundizó en la sobreescritura de métodos (@Override) para que cada subclase muestre su información específica reutilizando el comportamiento común definido en la superclase mediante super.
 
-*   **`model/` (Jerarquía de Clases)**
-    *   `ServicioTuristico`: Superclase base que agrupa los atributos comunes de todos los servicios (`nombre` y `duracionHoras`).
-    *   `RutaGastronomica`: Subclase con el atributo específico `numeroDeParadas`.
-    *   `PaseoLacustre`: Subclase con el atributo específico `tipoEmbarcacion`.
-    *   `ExcursionCultural`: Subclase con el atributo específico `lugarHistorico`.
-*   **`data/` (Lógica de Pruebas)**
-    *   `GestorServicios`: Clase encargada de instanciar objetos de prueba para cada subclase y desplegar sus datos utilizando el método `toString()`.
-*   **`ui/` (Interfaz de Usuario)**
-    *   `Main`: Punto de entrada del programa que inicializa el gestor y ejecuta la demostración.
+🧱 Clases Creadas y Estructura de Paquetes
 
-## 🚀 Instrucciones para Ejecutar el Proyecto
+El proyecto se organiza en tres paquetes principales según sus responsabilidades:
+
+model/ (Jerarquía de Clases)
+
+
+ServicioTuristico: Superclase base que agrupa los atributos comunes (nombre, duracionHoras), con sus respectivos getters y setters, y el método mostrarInformacion() que imprime los datos generales del servicio.
+RutaGastronomica: Subclase con el atributo específico numeroDeParadas (encapsulado con getter/setter). Sobrescribe mostrarInformacion() para mostrar el detalle de la ruta gastronómica, reutilizando el método de la superclase con super.mostrarInformacion().
+PaseoLacustre: Subclase con el atributo específico tipoEmbarcacion (encapsulado con getter/setter). Sobrescribe mostrarInformacion() para mostrar el tipo de embarcación del paseo.
+ExcursionCultural: Subclase con el atributo específico lugarHistorico (encapsulado con getter/setter). Sobrescribe mostrarInformacion() para mostrar el lugar histórico a visitar.
+
+
+data/ (Lógica de Pruebas)
+
+
+GestorServicios: Clase encargada de instanciar objetos de prueba para cada subclase y desplegar su información a través del método mostrarInformacion().
+
+
+ui/ (Interfaz de Usuario)
+
+
+Main: Punto de entrada del programa que inicializa el GestorServicios y ejecuta la demostración de todos los servicios turísticos.
+
+
+🔑 Conceptos Aplicados
+
+
+Encapsulamiento: Todos los atributos específicos de cada subclase son private, accesibles únicamente mediante sus métodos get/set correspondientes.
+Herencia: Las tres subclases extienden de ServicioTuristico, heredando nombre y duracionHoras.
+Polimorfismo: Cada subclase sobrescribe mostrarInformacion() con @Override, complementando la información base de la superclase mediante super.mostrarInformacion() antes de imprimir sus propios atributos.
+
+
+🚀 Instrucciones para Ejecutar el Proyecto
+
 Para compilar y ejecutar el programa desde tu Entorno de Desarrollo (IDE), sigue estos pasos:
 
-1.  Abre el proyecto `LlanquihueTourAppSemana6` en tu IDE (IntelliJ IDEA, Eclipse o NetBeans).
-2.  Navega a través del árbol de carpetas hasta la ruta: `src/main/java/ui/`.
-3.  Abre el archivo **`Main.java`**.
-4.  Haz clic derecho en cualquier parte del código de ese archivo y selecciona la opción **Run 'Main.main()'** (o presiona el botón verde de reproducción ▶️ en la barra superior).
-5.  Verifica los resultados en la pestaña **Run / Consola** ubicada en la parte inferior de la pantalla, donde se listarán de forma detallada los servicios turísticos creados.
+
+Abre el proyecto LlanquihueTourAppSemana7 en tu IDE (IntelliJ IDEA, Eclipse o NetBeans).
+Navega a través del árbol de carpetas hasta la ruta: src/main/java/ui/.
+Abre el archivo Main.java.
+Haz clic derecho en cualquier parte del código de ese archivo y selecciona la opción Run 'Main.main()' (o presiona el botón verde de reproducción ▶️ en la barra superior).
+Verifica los resultados en la pestaña Run / Consola ubicada en la parte inferior de la pantalla, donde se listará de forma detallada la información de cada servicio turístico creado.
