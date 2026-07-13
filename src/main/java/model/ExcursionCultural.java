@@ -20,7 +20,7 @@ public class ExcursionCultural extends ServicioTuristico {
     }
     @Override
     public void mostrarResumen(){
-        System.out.println("\n---Excursion Cultural---\n");
+
         System.out.println("El nombre del servicio es: " + nombre);
         System.out.println("Paseo en lugar historico: " + lugarHistorico);
         }

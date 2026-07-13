@@ -28,7 +28,7 @@ public ServicioTuristico(String nombre, String duracionHoras) {
 }
 
 public void mostrarResumen() {
-    System.out.println("\n---Servicios Turisticos---\n");
+
     System.out.println("Nombre: " + nombre);
     System.out.println("Duracion horas: " + duracionHoras);
 

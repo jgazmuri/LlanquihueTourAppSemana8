@@ -38,7 +38,7 @@ public class Main extends JFrame {
         JTextField lugarHistorico = new JTextField();
 
         JPanel panel = new JPanel(new GridLayout(0, 2, 5, 5));
-        panel.setBorder(BorderFactory.createTitledBorder("Excurcion Cultural"));
+
         panel.add(new JLabel("Nombre: ")); panel.add(nombre);
         panel.add(new JLabel("Duracion Horas: ")); panel.add(duracionHoras);
         panel.add(new JLabel("Lugar Historico: ")); panel.add(lugarHistorico);
@@ -93,7 +93,7 @@ public class Main extends JFrame {
         JTextField tipoEmbarcacion = new JTextField();
 
         JPanel panel = new JPanel(new GridLayout(0, 2, 5, 5));
-        panel.setBorder(BorderFactory.createTitledBorder("Paseo Lacustre"));
+
         panel.add(new JLabel("Nombre:")); panel.add(nombre);
         panel.add(new JLabel("Duracion Horas:")); panel.add(duracionHoras);
         panel.add(new JLabel("Tipo Embarcacion:")); panel.add(tipoEmbarcacion);
@@ -214,7 +214,7 @@ public class Main extends JFrame {
         JScrollPane scroll = new JScrollPane(listaVisual);
 
         JPanel panel = new JPanel(new GridLayout(0, 2, 5, 5));
-        panel.setBorder(BorderFactory.createTitledBorder("Nombre Servicio"));
+
         panel.add(new JLabel("Nombre:")); panel.add(nombre);
         panel.add(new JLabel("Duracion Horas:")); panel.add(duracionHoras);
 

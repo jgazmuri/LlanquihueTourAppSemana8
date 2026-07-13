@@ -20,7 +20,7 @@ public class PaseoLacustre extends ServicioTuristico {
 
     @Override
     public void mostrarResumen(){
-        System.out.println("\n---Paseo Lacustre---\n");
+
         System.out.println("El nombre del servicio es: " + nombre);
         System.out.println("El tipo de Embarcacion es: " + tipoEmbarcacion);
     }
